@@ -158,6 +158,21 @@
         noBtn.style.top = `${randomY}px`;
     });
 
+    // BOTÃO NÃO FOGE
+    noBtn.addEventListener("click", () => {
+
+        const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+        const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        noBtn.style.position = "fixed";
+        noBtn.style.left = `${randomX}px`;
+        noBtn.style.top = `${randomY}px`;
+    });
+
+   
     // CLICOU EM SIM
     yesBtn.addEventListener("click", () => {
 
